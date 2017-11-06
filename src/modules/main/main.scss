@@ -1,0 +1,28 @@
+@import "../../mixins";
+
+.main {
+  padding: 5px;
+
+  p {
+    background: blueviolet;
+    @include round(10px);
+    padding: 20px;
+    position: relative;
+    color: #fff;
+
+    &::after {
+      @include triangle(up);
+      left: 20px;
+      top: -20px;
+    }
+  }
+
+  ul {
+    @for $i from 1 through 20 {
+      li:nth-child(#{$i}) {
+        background: rgb(random(255), random(255), random(255));
+        width: 5% * $i;
+      }
+    }
+  }
+}

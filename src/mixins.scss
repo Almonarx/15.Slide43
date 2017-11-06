@@ -1,0 +1,20 @@
+@mixin round($angle: 10px) {
+  border-radius: $angle;
+}
+
+@mixin triangle($direction: up) {
+  border: 10px solid transparent;
+  content: '';
+  position: absolute;
+  $value: 10px solid blueviolet;
+
+  @if $direction == up {
+    border-bottom: $value;
+  } @else if $direction == right {
+    border-left: $value;
+  } @else if $direction == down {
+    border-top: $value;
+  } @else if $direction == left {
+    border-right: $value;
+  }
+}

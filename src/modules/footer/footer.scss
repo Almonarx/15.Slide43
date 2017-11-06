@@ -1,0 +1,12 @@
+@import "../../functions";
+$color: #ccc;
+$font-size: 14px;
+
+.footer {
+    background: getDarken($color);
+    padding: 5px;
+    font-size: $font-size;
+    a {
+        font-size: getPart($font-size, 80);
+    }
+}
